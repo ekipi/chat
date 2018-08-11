@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ekipi/chat#readme",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
     "socket.io": "^2.1.1"
