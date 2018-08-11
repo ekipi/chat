@@ -1,0 +1,27 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "chat module for ekipi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekipi/chat.git"
+  },
+  "keywords": [
+    "chat"
+  ],
+  "author": "ctapal,rorosingh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ekipi/chat/issues"
+  },
+  "homepage": "https://github.com/ekipi/chat#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "socket.io": "^2.1.1"
+  }
+}
