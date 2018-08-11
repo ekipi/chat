@@ -56,14 +56,21 @@
 <script>
     $(() => {
         const socket = io();
+        var room = "abc123";//This will be passed dynamically when user clicks on a event(EventId)
+        //When connectin is established emit a room event
+        socket.on('connect', () => {
+            socket.emit('room', room);
+        });
+        //On form submit emit a chat event
         $('form').submit(() => {
-            socket.emit('chat message', $('#m').val());
+            socket.emit('chat', $('#m').val());
             $('#m').val('');
             return false;
         });
-        socket.on('chat message', (message) => {
-            $('#messages').append($('<li>').text(message));
-        });
+        //When server emits a chat event, capture the chat message and display it on UI
+        socket.on('chat', (clientId, message) => {
+            $('#messages').append($('<li>').text(clientId +":"+message));
+        }); 
     });
 </script>
 
